@@ -128,9 +128,20 @@ npm test
 
 ---
 
+## ☸️ Deploy no Kubernetes
+
+Além do Docker Compose, o projeto inclui manifests completos para rodar em um cluster Kubernetes (Deployment, Service, ConfigMap, Secret, PVC para o Postgres, health checks e escalonamento). Veja o passo a passo em [`k8s/README.md`](k8s/README.md).
+
+```bash
+docker build -t lgpd-auth-api:local .
+kubectl apply -f k8s/
+```
+
+---
+
 ## 🛠️ Tecnologias
 
-Node.js · Express · PostgreSQL · JWT · bcrypt · zod · Docker · GitHub Actions · Jest
+Node.js · Express · PostgreSQL · JWT · bcrypt · zod · Docker · Kubernetes · GitHub Actions · Jest
 
 ---
 

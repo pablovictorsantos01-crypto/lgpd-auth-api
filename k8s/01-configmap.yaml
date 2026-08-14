@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: lgpd-auth-api
+data:
+  PORT: "3000"
+  JWT_EXPIRES_IN: "1h"
+  POSTGRES_DB: "lgpd_auth"
+  POSTGRES_USER: "postgres"
