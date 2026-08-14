@@ -7,6 +7,7 @@ Projeto criado como portfólio, demonstrando boas práticas de backend: autentic
 ![CI](https://github.com/pablovictorsantos01-crypto/lgpd-auth-api/actions/workflows/ci.yml/badge.svg)
 ![Node](https://img.shields.io/badge/node-20.x-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
+![Docker Image](https://img.shields.io/badge/ghcr.io-lgpd--auth--api-blue?logo=docker)
 
 ---
 
@@ -56,7 +57,7 @@ lgpd-auth-api/
 ### Opção 1 — com Docker (recomendado)
 
 ```bash
-git clone https://github.com/pablovictorsantos01-crypto/lgpd-auth-api.git
+git clone https://github.com/SEU_USUARIO/lgpd-auth-api.git
 cd lgpd-auth-api
 docker compose up --build
 ```
@@ -125,6 +126,20 @@ Este projeto foi pensado para demonstrar, na prática, alguns dos princípios e 
 ```bash
 npm test
 ```
+
+---
+
+## 📦 Imagem Docker publicada automaticamente
+
+A cada push na branch `main`, o pipeline de CI/CD builda a imagem e publica automaticamente no **GitHub Container Registry**, com duas tags: `latest` e o hash curto do commit.
+
+```bash
+docker pull ghcr.io/pablovictorsantos01-crypto/lgpd-auth-api:latest
+```
+
+Isso permite usar a imagem já pronta no `k8s/06-api-deployment.yaml` (troque `lgpd-auth-api:local` por `ghcr.io/pablovictorsantos01-crypto/lgpd-auth-api:latest`), sem precisar buildar localmente.
+
+> A primeira vez que a imagem for publicada, o pacote fica **privado** por padrão no GitHub. Para deixá-lo público (e permitir o `docker pull` sem login), vá em seu perfil → **Packages** → `lgpd-auth-api` → **Package settings** → **Change visibility**.
 
 ---
 
