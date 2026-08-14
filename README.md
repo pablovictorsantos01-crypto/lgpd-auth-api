@@ -4,7 +4,7 @@ API REST de autenticação (cadastro e login) construída em **Node.js + Express
 
 Projeto criado como portfólio, demonstrando boas práticas de backend: autenticação segura, containerização com Docker, CI no GitHub Actions e tratamento de dados pessoais.
 
-![CI](https://github.com/SEU_USUARIO/lgpd-auth-api/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/pablovictorsantos01-crypto/lgpd-auth-api/actions/workflows/ci.yml/badge.svg)
 ![Node](https://img.shields.io/badge/node-20.x-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -56,7 +56,7 @@ lgpd-auth-api/
 ### Opção 1 — com Docker (recomendado)
 
 ```bash
-git clone https://github.com/SEU_USUARIO/lgpd-auth-api.git
+git clone https://github.com/pablovictorsantos01-crypto/lgpd-auth-api.git
 cd lgpd-auth-api
 docker compose up --build
 ```
